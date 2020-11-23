@@ -71,7 +71,7 @@
           $gebruikersnaam = $_POST['gebruikersnaam'];
           $wachtwoord = md5($_POST['wachtwoord']);
 
-          $query = "SELECT gebruikersID FROM gebruikers WHERE gebruikersnaam = '$gebruikersnaam' AND wachtwoord = '$wachtwoord'";
+          $query = "SELECT gebruikersnr FROM gebruiker WHERE gebruikersnaam = '$gebruikersnaam' AND wachtwoord = '$wachtwoord'";
           $resultaat = mysqli_query($conn, $query);
           $resultaatCheck = mysqli_num_rows($resultaat);
           if($resultaatCheck > 0){
